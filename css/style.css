@@ -1,0 +1,202 @@
+/* sharedt style */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Playfair+Display Montserrat font   from google font */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Montserrat&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+
+*{
+    /* font-family: 'Lora', serif; */
+font-family: 'Montserrat', sans-serif;
+/* font-family: 'Playfair Display', serif; */
+}
+h1{
+    font-family: 'Playfair Display', serif;
+}
+h2{
+    font-family: 'Playfair Display', serif;
+}
+.light-grey{
+    color: #4F4F4F;
+}
+
+body{
+    max-width: 1200px;
+    margin: 0px auto;
+   padding: 20px 30px;
+}
+
+
+
+section{
+    margin: 50px 0px;
+}
+
+/* section1 styles */
+.section1 .section1-title{
+    color: #000;
+font-size: 3rem;
+font-weight: 700;
+}
+.section1 .section1-des{
+width: 60%;
+font-size: 14px;
+font-style: italic;
+font-weight: 500;
+padding: 18px 0px;
+}
+.section1 img{
+    width: 100%;
+    height: 100%;
+
+}
+/* section1 styles end */
+
+
+/* section2 styles start */
+
+
+.section2-container{
+display: flex;
+justify-content:space-between
+}
+
+.section2-left{
+    width: 60%;
+}
+.section2-left .section2-title{
+    color:  #333;
+    font-family: Playfair Display;
+    font-size: 26px;
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+.section2-left li>input{
+
+    margin-right: 10px;
+    transform: scale(1.5);
+}
+.section2-left>ul{
+   list-style: none;
+}
+.section2-left> ul .list-title{
+    color: #333;
+    font-family: Playfair Display;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 30px 0px;
+    font-style: italic;
+}
+.section2-left ul li{
+    margin-bottom: 50px;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+
+
+#blog {
+    counter-reset: myOrderedListItemsCounter;
+  }
+  
+#blog  li {
+    list-style-type: none;
+    position: relative;
+  }
+#blog  li:before {
+    counter-increment: myOrderedListItemsCounter;
+    content: counter(myOrderedListItemsCounter)".";
+    margin-right: .5em;
+    background-color: #F2994A;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-weight: 800;
+  }
+/* .section2-left .blog-post-ul li::marker{
+
+   background-image:linear-gradient(red,blue);
+} */
+
+.section2-left a{
+    text-decoration: none;
+}
+
+
+
+
+.section2-right{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+}
+
+
+.bar-container{
+    width: 50%;
+    border-radius: 12px;
+background: #FFF;
+box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+padding: 40px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 40px;
+}
+.bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bar i{
+    font-size: 30px;
+    margin-right: 20px;
+    color:orangered;
+}
+.bar p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.bar-text-grey{
+    color: #BDBDBD;
+    font-weight: 700;
+}
+
+/* responsive for mobile */
+
+
+
+
+
+@media screen and (max-width:992px) {
+    main{
+        padding: 30px 20px;
+    }
+    .section1 .section1-des{
+        width: 100%;
+        text-align: center;
+    }
+    .section2-container{
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+    .bar-container{
+        width: 100%;
+ 
+    flex-direction: row;
+    margin-bottom: 40px;
+    }
+    .section2-left,.section2-right{
+        width: 100%;
+    }
+}
